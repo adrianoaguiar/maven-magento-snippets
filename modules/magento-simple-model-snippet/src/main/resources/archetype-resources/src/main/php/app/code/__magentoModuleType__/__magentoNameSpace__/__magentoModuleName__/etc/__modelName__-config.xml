@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+		<!-- model configuration -->
+		<models>
+			<${magentoModuleNameLowerCase}>
+				<class>${magentoNameSpace}_${magentoModuleName}_Model</class>
+				<resourceModel>${magentoModuleNameLowerCase}_mysql4</resourceModel>
+			</${magentoModuleNameLowerCase}>
+			<${magentoModuleNameLowerCase}_mysql4>
+				<class>${magentoNameSpace}_${magentoModuleName}_Model_Mysql4</class>
+				<entities>
+					<${modelName}>
+						<table>${magentoModuleNameLowerCase}_${modelNameLowerCase}</table>
+					</${modelName}>
+				</entities>
+			</${magentoModuleNameLowerCase}_mysql4>
+		</models>
+		
+		<!-- resource model configuration -->
+	    <resources>
+	    	<${magentoModuleNameLowerCase}_setup>
+	         	<setup>
+	            	<module>${magentoNameSpace}_${magentoModuleName}</module>
+	            	<class>${magentoNameSpace}_${magentoModuleName}_Model_Entity_Setup</class>
+	            </setup>
+	            <connection>
+	            	<use>core_setup</use>
+	            </connection>
+	        </${magentoModuleNameLowerCase}_setup>
+	        <${magentoModuleNameLowerCase}_write>
+	        	<connection>
+	            	<use>core_write</use>
+	            </connection>
+	        </${magentoModuleNameLowerCase}_write>
+	        <${magentoModuleNameLowerCase}_read>
+	        	<connection>
+	            	<use>core_read</use>
+	            </connection>
+	 		</${magentoModuleNameLowerCase}_read>
+		</resources>
+	</global>
+</config>    

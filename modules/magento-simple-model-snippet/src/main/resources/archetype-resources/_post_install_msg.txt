@@ -1,0 +1,11 @@
+
+  ${modelName} successfully installed into:
+  
+    src/main/php/app/code/${magentoModuleType}/${magentoNameSpace}/${magentoModuleName}
+
+  Either merge the following files with your existing config, or remove the trailing ${modelName}- from the filenames:
+ 
+    src/main/php/app/code/${magentoModuleType}/${magentoNameSpace}/${magentoModuleName}/etc/${modelName}-config.xml
+    src/main/php/app/code/${magentoModuleType}/${magentoNameSpace}/${magentoModuleName}/Model/Entity/${modelName}-Setup.php
+    src/main/php/app/code/${magentoModuleType}/${magentoNameSpace}/${magentoModuleName}/Model/sql/${magentoModuleNameLowerCase}-setup/${modelName}-mysql4-install-0.0.1.php
+ 
